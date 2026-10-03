@@ -10,9 +10,15 @@ if __name__ == '__main__':
     root = Path(__file__).resolve().parents[1]
     command = [sys.executable, '-u', '-m', 'pytest', '-q', '--timeout=60',
                '--timeout-method=thread', f'--junitxml=tests-{label}.junit.xml']
+    process = subprocess.Popen(command, cwd=root)
     try:
-        result = subprocess.run(command, cwd=root, timeout=150)
-        raise SystemExit(result.returncode)
+        raise SystemExit(process.wait(timeout=150))
     except subprocess.TimeoutExpired:
         print('Test process exceeded 150 seconds, including interpreter shutdown.', flush=True)
+        if sys.platform == 'win32':
+            # Killing only pytest leaves spawned children holding the CI log pipe.
+            subprocess.run(['taskkill', '/F', '/T', '/PID', str(process.pid)], check=False, timeout=20)
+        else:
+            process.kill()
+        process.wait(timeout=20)
         raise SystemExit(1)
