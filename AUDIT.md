@@ -1,4 +1,4 @@
-# Implementation audit: TRACE 0.2.2
+# Implementation audit: TRACE 0.2.3
 
 The starting implementation passed all 81 existing tests. Its main gaps were feature completeness and failure-path coverage, not a failing baseline suite.
 
@@ -19,7 +19,7 @@ The starting implementation passed all 81 existing tests. Its main gaps were fea
 | UI/tests covered layout and analysis, but not all tab actions | Added an end-to-end real-Tk workflow test spanning all four tabs and error recovery |
 | Original app branding was generic | Added TRACE dark branding and `trace-osint`; retained old command/package compatibility |
 
-Version 0.2 added no mandatory Python dependencies; version 0.2.2 adds filelock for native process locking across platforms. GUI still needs system Tk and a display; OCR still needs system Tesseract. This host's default Python lacks Tk/Tesseract; verification used the existing isolated Python/Tk runtime and locally extracted Debian OCR packages. Kali's apt installation commands cover these dependencies.
+Version 0.2 added no mandatory Python dependencies; version 0.2.3 adds filelock for native process locking across platforms. GUI still needs system Tk and a display; OCR still needs system Tesseract. This host's default Python lacks Tk/Tesseract; verification used the existing isolated Python/Tk runtime and locally extracted Debian OCR packages. Kali's apt installation commands cover these dependencies.
 
 Intentionally unfinished capabilities are listed as limitations, not investigation results: automatic Instagram retrieval, private/authenticated platform access, anonymous identity linkage, leaked-data lookup, calibrated bot probabilities, source authenticity, multi-writer synchronization and encrypted/signed forensic custody are not implemented.
 

@@ -4,13 +4,13 @@ Download only the asset matching your operating system and processor from [GitHu
 
 | Platform | Download | Installation |
 | --- | --- | --- |
-| Windows 10/11, x64 | `TRACE-0.2.2-windows-x64-setup.exe` | Run the per-user installer, then open TRACE from Start. No administrator rights needed. |
-| Windows, x64 portable | `TRACE-0.2.2-windows-x64-portable.zip` | Extract the **whole** folder into a writable location and run `TRACE.exe`. Keep `_internal` alongside it. `trace-cli.exe` is the CLI. |
-| macOS 15+, Apple Silicon | `TRACE-0.2.2-macos-arm64.pkg` or `.zip` | `.pkg` installs `TRACE.app` in Applications; ZIP is a drag-install alternative. |
-| macOS 15+, Intel | `TRACE-0.2.2-macos-x64.pkg` or `.zip` | Select x64 on an Intel Mac; install or extract the app. |
-| Kali/Debian Linux, amd64 | `TRACE-0.2.2-linux-amd64.deb` | `sudo apt install ./TRACE-0.2.2-linux-amd64.deb`, then launch TRACE from the menu or `trace-osint`. |
-| Linux x64, glibc 2.35+ | `TRACE-0.2.2-linux-x64.tar.gz` | Extract the whole folder, then run `./TRACE/TRACE`. CLI: `./TRACE/trace-cli doctor`. Requires a graphical display and X/font libraries. |
-| Any supported Python platform | `TRACE-0.2.2-source.zip` | Extract and follow the source installation guide in README.md. |
+| Windows 10/11, x64 | `TRACE-0.2.3-windows-x64-setup.exe` | Run the per-user installer, then open TRACE from Start. No administrator rights needed. |
+| Windows, x64 portable | `TRACE-0.2.3-windows-x64-portable.zip` | Extract the **whole** folder into a writable location and run `TRACE.exe`. Keep `_internal` alongside it. `trace-cli.exe` is the CLI. |
+| macOS 15+, Apple Silicon | `TRACE-0.2.3-macos-arm64.pkg` or `.zip` | `.pkg` installs `TRACE.app` in Applications; ZIP is a drag-install alternative. |
+| macOS 15+, Intel | `TRACE-0.2.3-macos-x64.pkg` or `.zip` | Select x64 on an Intel Mac; install or extract the app. |
+| Kali/Debian Linux, amd64 | `TRACE-0.2.3-linux-amd64.deb` | `sudo apt install ./TRACE-0.2.3-linux-amd64.deb`, then launch TRACE from the menu or `trace-osint`. |
+| Linux x64, glibc 2.35+ | `TRACE-0.2.3-linux-x64.tar.gz` | Extract the whole folder, then run `./TRACE/TRACE`. CLI: `./TRACE/trace-cli doctor`. Requires a graphical display and X/font libraries. |
+| Any supported Python platform | `TRACE-0.2.3-source.zip` | Extract and follow the source installation guide in README.md. |
 
 The macOS installers/apps and Windows executables are **not Developer ID/Authenticode signed or notarized**. Operating-system trust checks may block them. TRACE does not change protection settings; source installation is available if your system will not accept an unsigned installer. On macOS a standard local/ad-hoc PyInstaller signature, when present, is not an Apple Developer ID signature.
 
@@ -28,7 +28,7 @@ Save cases outside the application installation folder so an uninstall/update ca
 
 ## Build and verification
 
-Each platform is built on its native GitHub runner. Before packaging, the workflow runs pytest and executes the **frozen application**, opens/selects all four GUI tabs using a synthetic case, analyzes it, and exercises CLI dependency checks, demo creation, HTML reporting and case ZIP export. The `build-validation-*.json` release assets record those smoke results. Tests requiring an absent OCR engine are reported as skipped on runners without Tesseract. Interactive installer clicks, real user desktops, Linux distribution coverage and OS signing are not established by those checks.
+Each platform is built on its native GitHub runner. Before packaging, the workflow runs pytest (each GUI check uses its own process to avoid reinitializing Tk) and executes the **frozen application**, opens/selects all four GUI tabs using a synthetic case, analyzes it, and exercises CLI dependency checks, demo creation, HTML reporting and case ZIP export. The `build-validation-*.json` release assets record those smoke results. Tests requiring an absent OCR engine are reported as skipped on runners without Tesseract. Interactive installer clicks, real user desktops, Linux distribution coverage and OS signing are not established by those checks.
 
 The GitHub workflow publishes a tagged release only after **all four native jobs pass**. No release asset is claimed merely because a workflow was configured. Test results are downloadable workflow artifacts. GUI smoke data is synthetic and no network action is performed by the executable checks.
 

@@ -1,4 +1,4 @@
-# TRACE 0.2.2 validation
+# TRACE 0.2.3 validation
 
 Validated on 3 October 2026 on Linux x86_64 using Python 3.13.16, Tk 9.0.4, Pillow 12.3.0 and Tesseract 5.3.0. A dedicated Kali VM was unavailable; the installation guide lists Kali's apt/venv dependencies.
 
@@ -20,7 +20,7 @@ Validated on 3 October 2026 on Linux x86_64 using Python 3.13.16, Tk 9.0.4, Pill
 
 ## Native packaging follow-up
 
-The 0.2.2 local suite includes seven extra state-path and cross-process lock checks. Linux-only imports were replaced by filelock native process locks, Windows uses a user-writable state directory, and frozen GUI/CLI smoke checks are configured before installer assembly. Historical baseline checks remain covered. Parameter IDs in TEST_RESULTS.xml are shortened with a SHA-256 suffix when very long; captured diagnostics and host attributes are omitted for publication. The GitHub release workflow builds/tests each native target and publishes executable validation records only after success; installer availability is established by the actual release assets, not this configuration.
+The 0.2.3 local suite includes seven extra state-path and cross-process lock checks. Linux-only imports were replaced by filelock native process locks, Windows uses a user-writable state directory, and frozen GUI/CLI smoke checks are configured before installer assembly. Historical baseline checks remain covered. Parameter IDs in TEST_RESULTS.xml are shortened with a SHA-256 suffix when very long; captured diagnostics and host attributes are omitted for publication. The GitHub release workflow builds/tests each native target and publishes executable validation records only after success; installer availability is established by the actual release assets, not this configuration.
 
 ## Live public API probe
 

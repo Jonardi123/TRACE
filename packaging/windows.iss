@@ -1,5 +1,5 @@
 #ifndef TraceVersion
-  #define TraceVersion "0.2.2"
+  #define TraceVersion "0.2.3"
 #endif
 #ifndef TraceSource
   #define TraceSource "..\dist\TRACE"

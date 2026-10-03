@@ -1,4 +1,4 @@
-# TRACE 0.2.2
+# TRACE 0.2.3
 
 TRACE is a local Python investigation application for public account observations and evidence you are authorized to examine. This release extends the existing OSINT Workbench rather than replacing it. Existing version 0.1 cases load with defaults for new fields; the Python package and `osint-workbench` command remain compatible aliases.
 
@@ -15,7 +15,7 @@ Use Python 3.11+ in a virtual environment. Do not install pip packages into Kali
 ```bash
 sudo apt update
 sudo apt install -y python3 python3-venv python3-tk tesseract-ocr fonts-dejavu-core
-unzip TRACE-0.2.2-source.zip
+unzip TRACE-0.2.3-source.zip
 cd trace
 python3 -m venv .venv
 source .venv/bin/activate
