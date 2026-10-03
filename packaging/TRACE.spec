@@ -1,8 +1,10 @@
 # Build on the target OS; Python/Tk and Python libraries are bundled, OCR is external.
 from pathlib import Path
 import sys
+import tomllib
 
 root = Path(SPECPATH).parent
+version = tomllib.loads((root / 'pyproject.toml').read_text(encoding='utf-8'))['project']['version']
 a = Analysis(
     [str(root / 'packaging/entry.py')], pathex=[str(root)],
     binaries=[], datas=[], hiddenimports=['osint_workbench.gui', 'PIL.ImageTk'],
@@ -18,5 +20,5 @@ cli = EXE(pyz, a.scripts, options, exclude_binaries=True, name='trace-cli',
 collection = COLLECT(gui, cli, a.binaries, a.datas, strip=False, upx=False, name='TRACE')
 if sys.platform == 'darwin':
     app = BUNDLE(collection, name='TRACE.app', bundle_identifier='io.github.jonardi123.trace',
-                 info_plist={'CFBundleDisplayName': 'TRACE', 'CFBundleShortVersionString': '0.2.1',
+                 info_plist={'CFBundleDisplayName': 'TRACE', 'CFBundleShortVersionString': version,
                              'NSHighResolutionCapable': True})
