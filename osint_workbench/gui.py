@@ -62,7 +62,7 @@ class Workbench(tk.Tk):
         self.case = None
         self.directory = None
         self.busy = False
-        self.worker = ThreadPoolExecutor(max_workers=1)
+        self.worker = ThreadPoolExecutor(max_workers=1, thread_name_prefix='TRACE-worker')
         self.events = queue.Queue()
         self.controls = []
         self.research_state_dir = None
@@ -673,7 +673,9 @@ class Workbench(tk.Tk):
         if self.busy:
             self.status.set("Wait for the current import/search to finish before closing")
             return
-        self.worker.shutdown(wait=False, cancel_futures=True)
+        # No task is busy here. Finish callbacks before destroying Tk objects:
+        # finalizing their references on an executor thread can hang Tcl shutdown.
+        self.worker.shutdown(wait=True, cancel_futures=True)
         self.destroy()
 
 

@@ -1,6 +1,7 @@
 """Run under xvfb-run on CI/headless Kali; skipped when Tk/display is absent."""
 import os
 import sys
+import threading
 import pytest
 
 
@@ -143,6 +144,7 @@ def test_four_tab_workflows_and_background_recovery(tmp_path,monkeypatch):
         assert all(str(control.cget('state'))=='normal' for control in app.controls)
     finally:
         app.close()
+        assert not any(thread.name.startswith('TRACE-worker') for thread in threading.enumerate())
 
 
 def test_changed_header_handle_does_not_query_wrong_case(tmp_path):
