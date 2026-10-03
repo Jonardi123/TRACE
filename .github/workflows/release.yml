@@ -47,10 +47,10 @@ jobs:
           python -m pip install --no-deps -e .
       - name: Test on Linux with a virtual display
         if: runner.os == 'Linux'
-        run: xvfb-run -a python -m pytest -q --junitxml=tests-${{ matrix.platform }}.junit.xml
+        run: xvfb-run -a python -m pytest -q --timeout=60 --timeout-method=thread --junitxml=tests-${{ matrix.platform }}.junit.xml
       - name: Test on Windows or macOS
         if: runner.os != 'Linux'
-        run: python -m pytest -q --junitxml=tests-${{ matrix.platform }}.junit.xml
+        run: python -m pytest -q --timeout=60 --timeout-method=thread --junitxml=tests-${{ matrix.platform }}.junit.xml
       - name: Build and smoke-test native Linux executables
         if: runner.os == 'Linux'
         run: xvfb-run -a python packaging/build_release.py

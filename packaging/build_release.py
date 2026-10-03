@@ -1,5 +1,6 @@
 """Native build, executable smoke checks, and installer/archive assembly."""
 import hashlib
+import importlib.metadata
 import json
 import os
 from pathlib import Path
@@ -7,6 +8,7 @@ import platform
 import shutil
 import subprocess
 import sys
+import sysconfig
 import tarfile
 import tempfile
 import tomllib
@@ -25,6 +27,33 @@ def zip_tree(folder, output):
         for path in sorted(folder.rglob('*')):
             if path.is_file():
                 archive.write(path, path.relative_to(folder.parent))
+
+
+def copy_license_notices(destination):
+    notices = destination / 'THIRD_PARTY_LICENSES'
+    notices.mkdir(exist_ok=True)
+    distributions = ('pillow', 'pytesseract', 'requests', 'filelock', 'certifi', 'urllib3',
+                     'charset-normalizer', 'idna', 'packaging', 'pyinstaller', 'setuptools', 'altgraph')
+    for name in distributions:
+        distribution = importlib.metadata.distribution(name)
+        for entry in distribution.files or []:
+            if '.dist-info' in str(entry) and any(token in entry.name.lower() for token in ('license', 'copying', 'notice')):
+                target = notices / name / str(entry).split('.dist-info/', 1)[1]
+                target.parent.mkdir(parents=True, exist_ok=True)
+                shutil.copyfile(distribution.locate_file(entry), target)
+    candidates = [Path(sysconfig.get_path('stdlib')) / 'LICENSE.txt',
+                  Path(sys.base_prefix) / 'LICENSE.txt', Path(sys.base_prefix) / 'LICENSE']
+    python_license = next((path for path in candidates if path.is_file()), None)
+    if python_license is None:
+        raise RuntimeError('The Python runtime license must be included; could not locate it.')
+    shutil.copyfile(python_license, notices / 'Python-LICENSE.txt')
+    for notice in (ROOT / 'packaging/licenses').glob('*'):
+        shutil.copyfile(notice, notices / notice.name)
+    (notices / 'README.txt').write_text(
+        'TRACE is MIT licensed. Bundled components retain their licenses.\n'
+        'Python/Pillow notices include their incorporated-library license texts.\n'
+        'Tcl/Tk license notices: https://github.com/tcltk/tcl and https://github.com/tcltk/tk\n'
+        'PyInstaller bootloader redistribution is covered by its bundled license exception.\n', encoding='utf-8')
 
 
 def linux_package(folder, release):
@@ -111,6 +140,7 @@ def main():
         docs = folder
     for name in ('LICENSE', 'INSTALLERS.md'):
         shutil.copyfile(ROOT / name, docs / name)
+    copy_license_notices(docs)
     evidence = release / f'build-validation-{sys.platform}-{arch}.json'
     with tempfile.TemporaryDirectory(prefix='trace-executable-') as temporary:
         temp = Path(temporary)
