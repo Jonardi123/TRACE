@@ -1,0 +1,136 @@
+{
+  "username": "example_demo_handle",
+  "id": "f52eccc862ed472f",
+  "created_at": "2026-10-03T18:27:35+00:00",
+  "updated_at": "2026-10-03T18:37:32+00:00",
+  "target_sender": "Demo sender",
+  "evidence": [
+    {
+      "id": "3d6adc3ce8e8447d",
+      "kind": "messages",
+      "filename": "3d6adc3ce8e8447d.json",
+      "sha256": "345a942acf913a708c7e931ca4b05f7427ba66e0389ad960be0d71136c87376e",
+      "imported_at": "2026-10-03T18:27:35+00:00",
+      "capture_at": null,
+      "source_url": "",
+      "notes": "Generated synthetic demonstration; no real messages.",
+      "ocr_text": "",
+      "ocr_confidence": null,
+      "warnings": []
+    },
+    {
+      "id": "20e4958b68c04a1a",
+      "kind": "screenshot",
+      "filename": "20e4958b68c04a1a.png",
+      "sha256": "8592b666f3e17c231ac6378f64815828c646ef3e05b80ed7793f2317f88b0ad1",
+      "imported_at": "2026-10-03T18:37:32+00:00",
+      "capture_at": null,
+      "source_url": "",
+      "notes": "Generated synthetic screenshot for local OCR demonstration; not actual platform evidence.",
+      "ocr_text": "SYNTHETIC EVIDENCE - NOT A REAL ACCOUNT\nPublic profile observation: example_demo_handle\nBiography: This is a local demonstration.\nAuthorized evidence example 12345\nDo not infer sender, timestamp, authenticity or identity from OCR.",
+      "ocr_confidence": 94.6,
+      "warnings": [
+        "Screenshot authenticity and sender attribution are not established. OCR may misread text."
+      ]
+    }
+  ],
+  "messages": [
+    {
+      "sender": "Demo sender",
+      "text": "Hello, this is a synthetic repeated message.",
+      "timestamp": "2026-01-01T00:00:00.000+00:00",
+      "evidence_id": "3d6adc3ce8e8447d",
+      "row": 1
+    },
+    {
+      "sender": "Demo sender",
+      "text": "Hello, this is a synthetic repeated message.",
+      "timestamp": "2026-01-01T00:00:30.000+00:00",
+      "evidence_id": "3d6adc3ce8e8447d",
+      "row": 2
+    },
+    {
+      "sender": "Demo sender",
+      "text": "Hello, this is a synthetic repeated message.",
+      "timestamp": "2026-01-01T00:01:00.000+00:00",
+      "evidence_id": "3d6adc3ce8e8447d",
+      "row": 3
+    },
+    {
+      "sender": "Demo sender",
+      "text": "Hello, this is a synthetic repeated message.",
+      "timestamp": "2026-01-01T00:01:30.000+00:00",
+      "evidence_id": "3d6adc3ce8e8447d",
+      "row": 4
+    },
+    {
+      "sender": "Demo sender",
+      "text": "Hello, this is a synthetic repeated message.",
+      "timestamp": "2026-01-01T00:02:00.000+00:00",
+      "evidence_id": "3d6adc3ce8e8447d",
+      "row": 5
+    },
+    {
+      "sender": "Demo sender",
+      "text": "Hello, this is a synthetic repeated message.",
+      "timestamp": "2026-01-01T00:02:30.000+00:00",
+      "evidence_id": "3d6adc3ce8e8447d",
+      "row": 6
+    },
+    {
+      "sender": "Demo sender",
+      "text": "Hello, this is a synthetic repeated message.",
+      "timestamp": "2026-01-01T00:03:00.000+00:00",
+      "evidence_id": "3d6adc3ce8e8447d",
+      "row": 7
+    },
+    {
+      "sender": "Demo sender",
+      "text": "Hello, this is a synthetic repeated message.",
+      "timestamp": "2026-01-01T00:03:30.000+00:00",
+      "evidence_id": "3d6adc3ce8e8447d",
+      "row": 8
+    },
+    {
+      "sender": "Demo sender",
+      "text": "Hello, this is a synthetic repeated message.",
+      "timestamp": "2026-01-01T00:04:00.000+00:00",
+      "evidence_id": "3d6adc3ce8e8447d",
+      "row": 9
+    },
+    {
+      "sender": "Demo sender",
+      "text": "Hello, this is a synthetic repeated message.",
+      "timestamp": "2026-01-01T00:04:30.000+00:00",
+      "evidence_id": "3d6adc3ce8e8447d",
+      "row": 10
+    },
+    {
+      "sender": "Demo sender",
+      "text": "Hello, this is a synthetic repeated message.",
+      "timestamp": "2026-01-01T00:05:00.000+00:00",
+      "evidence_id": "3d6adc3ce8e8447d",
+      "row": 11
+    },
+    {
+      "sender": "Demo sender",
+      "text": "Hello, this is a synthetic repeated message.",
+      "timestamp": "2026-01-01T00:05:30.000+00:00",
+      "evidence_id": "3d6adc3ce8e8447d",
+      "row": 12
+    }
+  ],
+  "observations": [
+    {
+      "field": "Biography",
+      "value": "SYNTHETIC DEMO — no real account investigated",
+      "source_url": "https://example.org/demo",
+      "observed_at": "2026-10-03T18:27:35+00:00",
+      "evidence_id": "",
+      "recorded_at": "2026-10-03T18:27:35+00:00"
+    }
+  ],
+  "matches": [],
+  "search_log": [],
+  "schema_version": 1
+}

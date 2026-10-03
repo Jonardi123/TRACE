@@ -1,0 +1,102 @@
+[
+  {
+    "sender": "Synthetic sender",
+    "text": "Synthetic unique message 0",
+    "timestamp": "2026-01-01T00:00:00+00:00"
+  },
+  {
+    "sender": "Synthetic sender",
+    "text": "Synthetic unique message 1",
+    "timestamp": "2026-01-01T00:00:03+00:00"
+  },
+  {
+    "sender": "Synthetic sender",
+    "text": "Synthetic unique message 2",
+    "timestamp": "2026-01-01T00:01:26+00:00"
+  },
+  {
+    "sender": "Synthetic sender",
+    "text": "Synthetic unique message 3",
+    "timestamp": "2026-01-01T00:01:37+00:00"
+  },
+  {
+    "sender": "Synthetic sender",
+    "text": "Synthetic unique message 4",
+    "timestamp": "2026-01-01T00:05:14+00:00"
+  },
+  {
+    "sender": "Synthetic sender",
+    "text": "Synthetic unique message 5",
+    "timestamp": "2026-01-01T00:05:43+00:00"
+  },
+  {
+    "sender": "Synthetic sender",
+    "text": "Synthetic unique message 6",
+    "timestamp": "2026-01-01T00:05:44+00:00"
+  },
+  {
+    "sender": "Synthetic sender",
+    "text": "Synthetic unique message 7",
+    "timestamp": "2026-01-01T00:07:47+00:00"
+  },
+  {
+    "sender": "Synthetic sender",
+    "text": "Synthetic unique message 8",
+    "timestamp": "2026-01-01T00:08:34+00:00"
+  },
+  {
+    "sender": "Synthetic sender",
+    "text": "Synthetic unique message 9",
+    "timestamp": "2026-01-01T00:08:40+00:00"
+  },
+  {
+    "sender": "Synthetic sender",
+    "text": "Synthetic unique message 10",
+    "timestamp": "2026-01-01T00:12:51+00:00"
+  },
+  {
+    "sender": "Synthetic sender",
+    "text": "Synthetic unique message 11",
+    "timestamp": "2026-01-01T00:14:20+00:00"
+  },
+  {
+    "sender": "Synthetic sender",
+    "text": "Synthetic unique message 12",
+    "timestamp": "2026-01-01T00:14:33+00:00"
+  },
+  {
+    "sender": "Synthetic sender",
+    "text": "Synthetic unique message 13",
+    "timestamp": "2026-01-01T00:17:29+00:00"
+  },
+  {
+    "sender": "Synthetic sender",
+    "text": "Synthetic unique message 14",
+    "timestamp": "2026-01-01T00:17:36+00:00"
+  },
+  {
+    "sender": "Synthetic sender",
+    "text": "Synthetic unique message 15",
+    "timestamp": "2026-01-01T00:18:37+00:00"
+  },
+  {
+    "sender": "Synthetic sender",
+    "text": "Synthetic unique message 16",
+    "timestamp": "2026-01-01T00:20:15+00:00"
+  },
+  {
+    "sender": "Synthetic sender",
+    "text": "Synthetic unique message 17",
+    "timestamp": "2026-01-01T00:20:17+00:00"
+  },
+  {
+    "sender": "Synthetic sender",
+    "text": "Synthetic unique message 18",
+    "timestamp": "2026-01-01T00:20:58+00:00"
+  },
+  {
+    "sender": "Synthetic sender",
+    "text": "Synthetic unique message 19",
+    "timestamp": "2026-01-01T00:23:27+00:00"
+  }
+]

@@ -1,0 +1,172 @@
+{
+  "username": "example_demo_handle",
+  "id": "d16bbf5dd3e24ee8",
+  "created_at": "2026-10-03T19:20:28+00:00",
+  "updated_at": "2026-10-03T19:20:29+00:00",
+  "target_sender": "Demo sender",
+  "evidence": [
+    {
+      "id": "f353a7b47cc54464",
+      "kind": "messages",
+      "filename": "f353a7b47cc54464.json",
+      "sha256": "345a942acf913a708c7e931ca4b05f7427ba66e0389ad960be0d71136c87376e",
+      "imported_at": "2026-10-03T19:20:28+00:00",
+      "capture_at": null,
+      "source_url": "",
+      "notes": "Generated synthetic demonstration; no real messages.",
+      "ocr_text": "",
+      "ocr_confidence": null,
+      "warnings": [],
+      "original_filename": "synthetic-messages.json",
+      "excluded": false,
+      "image_info": {},
+      "ocr_at": null
+    },
+    {
+      "id": "66cef1f7aa10437f",
+      "kind": "screenshot",
+      "filename": "66cef1f7aa10437f.png",
+      "sha256": "8592b666f3e17c231ac6378f64815828c646ef3e05b80ed7793f2317f88b0ad1",
+      "imported_at": "2026-10-03T19:20:29+00:00",
+      "capture_at": null,
+      "source_url": "",
+      "notes": "Generated synthetic screenshot; no real account or platform capture",
+      "ocr_text": "SYNTHETIC EVIDENCE - NOT A REAL ACCOUNT\nPublic profile observation: example_demo_handle\nBiography: This is a local demonstration.\nAuthorized evidence example 12345\nDo not infer sender, timestamp, authenticity or identity from OCR.",
+      "ocr_confidence": 94.6,
+      "warnings": [
+        "Screenshot authenticity and sender attribution are not established. OCR may misread text."
+      ],
+      "original_filename": "synthetic-screenshot.png",
+      "excluded": false,
+      "image_info": {
+        "width": 1200,
+        "height": 520,
+        "format": "PNG",
+        "frames": 1
+      },
+      "ocr_at": "2026-10-03T19:20:29+00:00"
+    }
+  ],
+  "messages": [
+    {
+      "sender": "Demo sender",
+      "text": "Hello, this is a synthetic repeated message.",
+      "timestamp": "2026-01-01T00:00:00.000+00:00",
+      "evidence_id": "f353a7b47cc54464",
+      "row": 1
+    },
+    {
+      "sender": "Demo sender",
+      "text": "Hello, this is a synthetic repeated message.",
+      "timestamp": "2026-01-01T00:00:30.000+00:00",
+      "evidence_id": "f353a7b47cc54464",
+      "row": 2
+    },
+    {
+      "sender": "Demo sender",
+      "text": "Hello, this is a synthetic repeated message.",
+      "timestamp": "2026-01-01T00:01:00.000+00:00",
+      "evidence_id": "f353a7b47cc54464",
+      "row": 3
+    },
+    {
+      "sender": "Demo sender",
+      "text": "Hello, this is a synthetic repeated message.",
+      "timestamp": "2026-01-01T00:01:30.000+00:00",
+      "evidence_id": "f353a7b47cc54464",
+      "row": 4
+    },
+    {
+      "sender": "Demo sender",
+      "text": "Hello, this is a synthetic repeated message.",
+      "timestamp": "2026-01-01T00:02:00.000+00:00",
+      "evidence_id": "f353a7b47cc54464",
+      "row": 5
+    },
+    {
+      "sender": "Demo sender",
+      "text": "Hello, this is a synthetic repeated message.",
+      "timestamp": "2026-01-01T00:02:30.000+00:00",
+      "evidence_id": "f353a7b47cc54464",
+      "row": 6
+    },
+    {
+      "sender": "Demo sender",
+      "text": "Hello, this is a synthetic repeated message.",
+      "timestamp": "2026-01-01T00:03:00.000+00:00",
+      "evidence_id": "f353a7b47cc54464",
+      "row": 7
+    },
+    {
+      "sender": "Demo sender",
+      "text": "Hello, this is a synthetic repeated message.",
+      "timestamp": "2026-01-01T00:03:30.000+00:00",
+      "evidence_id": "f353a7b47cc54464",
+      "row": 8
+    },
+    {
+      "sender": "Demo sender",
+      "text": "Hello, this is a synthetic repeated message.",
+      "timestamp": "2026-01-01T00:04:00.000+00:00",
+      "evidence_id": "f353a7b47cc54464",
+      "row": 9
+    },
+    {
+      "sender": "Demo sender",
+      "text": "Hello, this is a synthetic repeated message.",
+      "timestamp": "2026-01-01T00:04:30.000+00:00",
+      "evidence_id": "f353a7b47cc54464",
+      "row": 10
+    },
+    {
+      "sender": "Demo sender",
+      "text": "Hello, this is a synthetic repeated message.",
+      "timestamp": "2026-01-01T00:05:00.000+00:00",
+      "evidence_id": "f353a7b47cc54464",
+      "row": 11
+    },
+    {
+      "sender": "Demo sender",
+      "text": "Hello, this is a synthetic repeated message.",
+      "timestamp": "2026-01-01T00:05:30.000+00:00",
+      "evidence_id": "f353a7b47cc54464",
+      "row": 12
+    }
+  ],
+  "observations": [
+    {
+      "field": "Biography",
+      "value": "SYNTHETIC DEMO — no real account investigated",
+      "source_url": "https://example.org/demo",
+      "observed_at": "2026-10-03T19:20:28+00:00",
+      "evidence_id": "",
+      "recorded_at": "2026-10-03T19:20:28+00:00",
+      "basis": "Unverified note"
+    }
+  ],
+  "matches": [],
+  "search_log": [],
+  "schema_version": 1,
+  "public_results": [],
+  "instagram_review": {
+    "access_status": "Not checked",
+    "checked_at": null,
+    "notes": ""
+  },
+  "audit_log": [
+    {
+      "at": "2026-10-03T19:20:28+00:00",
+      "action": "evidence_imported",
+      "evidence_id": "f353a7b47cc54464",
+      "sha256": "345a942acf913a708c7e931ca4b05f7427ba66e0389ad960be0d71136c87376e",
+      "records": 12
+    },
+    {
+      "at": "2026-10-03T19:20:29+00:00",
+      "action": "evidence_imported",
+      "evidence_id": "66cef1f7aa10437f",
+      "sha256": "8592b666f3e17c231ac6378f64815828c646ef3e05b80ed7793f2317f88b0ad1",
+      "records": 0
+    }
+  ]
+}

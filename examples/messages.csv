@@ -1,0 +1,4 @@
+sender,timestamp,text
+Demo sender,2026-01-01T12:00:00Z,Hello from a synthetic sample
+Demo recipient,2026-01-01T12:00:05Z,This is a voluntary example
+Demo sender,2026-01-01T12:00:30Z,Hello from a synthetic sample

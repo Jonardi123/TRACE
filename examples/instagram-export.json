@@ -1,0 +1,7 @@
+{
+  "messages": [
+    {"sender_name": "Demo sender", "timestamp_ms": 1767225600000, "content": "Synthetic Instagram-shaped message"},
+    {"sender_name": "Demo recipient", "timestamp_ms": 1767225605000, "content": "A synthetic reply"},
+    {"sender_name": "Demo sender", "timestamp_ms": 1767225610000, "photos": [{"uri": "unused-placeholder.jpg"}]}
+  ]
+}

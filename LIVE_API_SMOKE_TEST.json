@@ -1,0 +1,36 @@
+{
+  "scope": "Actual public API transport check on the handle python; no Instagram inquiry or ownership linkage",
+  "results": [
+    {
+      "provider": "GitHub",
+      "requested_username": "python",
+      "status": "exact_public_handle",
+      "checked_at": "2026-10-03T18:56:42+00:00",
+      "request_url": "https://api.github.com/users/python",
+      "profile_url": "https://github.com/python",
+      "returned_username": "python",
+      "fields": {
+        "type": "Organization",
+        "public_repos": 96,
+        "followers": 32562,
+        "following": 0,
+        "created_at": "2012-03-11T15:56:37Z",
+        "updated_at": "2026-09-09T13:11:20Z"
+      },
+      "detail": "Exact public handle only. No evidence links this profile to the Instagram account or to a real-world identity. Coverage is limited to the selected providers and the time of the request.",
+      "response_sha256": "628c5a67118ce1d7207521750be95e23168d9d860d3d0074653f260ccf3a4261"
+    },
+    {
+      "provider": "GitLab",
+      "requested_username": "python",
+      "status": "no_exact_result",
+      "checked_at": "2026-10-03T18:56:43+00:00",
+      "request_url": "https://gitlab.com/api/v4/users?username=python&per_page=1",
+      "profile_url": "",
+      "returned_username": "",
+      "fields": {},
+      "detail": "No exact public handle returned by the selected API; this is not proof of account absence.",
+      "response_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    }
+  ]
+}
