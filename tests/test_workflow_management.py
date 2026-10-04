@@ -2,6 +2,7 @@ import json
 import zipfile
 import pytest
 from PIL import Image
+from osint_workbench import __version__
 from osint_workbench.analysis import analyze
 from osint_workbench.bundle import export_bundle
 from osint_workbench.core import Case
@@ -95,6 +96,7 @@ def test_case_bundle_is_portable_and_fails_on_tampering(tmp_path):
         assert bundle.testzip() is None
         assert {'case.json','manifest.json','report.html'}.issubset(bundle.namelist())
         manifest=json.loads(bundle.read('manifest.json'))
+        assert manifest['version']==__version__
         assert manifest['files'][0]['sha256']==case.evidence[0].sha256
         bundle.extractall(tmp_path/'restored')
     restored=load_case(tmp_path/'restored')

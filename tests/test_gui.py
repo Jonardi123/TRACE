@@ -1,8 +1,17 @@
 """Run under xvfb-run on CI/headless Kali; skipped when Tk/display is absent."""
 import os
+import gc
 import sys
 import threading
 import pytest
+
+
+@pytest.fixture(autouse=True)
+def collect_closed_tk_objects_on_main_thread():
+    yield
+    # Closed Tk roots contain Python cycles. Collect them before a later test's
+    # executor can trigger GC and finalize their Tcl objects on a worker thread.
+    gc.collect()
 
 
 def test_gui_layout_and_analysis(tmp_path):
