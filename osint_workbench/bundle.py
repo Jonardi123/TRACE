@@ -6,6 +6,7 @@ import tempfile
 import zipfile
 
 from .core import now, validate_case
+from . import __version__
 from .report import build_report
 from .storage import evidence_bytes
 
@@ -20,7 +21,7 @@ def export_bundle(case, directory, destination):
     destination.parent.mkdir(parents=True, exist_ok=True)
     fd, temporary = tempfile.mkstemp(prefix='.trace-bundle-', dir=destination.parent)
     os.close(fd)
-    manifest = {'application': 'TRACE', 'version': '0.2.0', 'exported_at': now(),
+    manifest = {'application': 'TRACE', 'version': __version__, 'exported_at': now(),
                 'case_id': case.id, 'includes': 'Case metadata and all original evidence, including excluded files',
                 'files': []}
     try:
